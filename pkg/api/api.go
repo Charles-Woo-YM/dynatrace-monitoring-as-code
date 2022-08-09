@@ -277,6 +277,12 @@ var apiMap = map[string]apiInput{
 		apiPath:                  "/api/config/v1/geographicRegions/ipAddressMappings",
 		isSingleConfigurationApi: true,
 	},
+	 "get-cluster": {
+      apiPath: "/api/v1.0/onpremise/cluster",                             
+      isSingleConfigurationApi: true, 
+      isNonUniqueNameApi: true,            
+      propertyNameOfGetAllResponse: "cluster",         
+  },
 }
 
 var standardApiPropertyNameOfGetAllResponse = "values"
