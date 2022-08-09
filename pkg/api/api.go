@@ -277,6 +277,13 @@ var apiMap = map[string]apiInput{
 		apiPath:                  "/api/config/v1/geographicRegions/ipAddressMappings",
 		isSingleConfigurationApi: true,
 	},
+	// Early adopter API !
+	 "get-cluster": {
+      apiPath: "/api/v1.0/onpremise/cluster",                             // mandatory
+      isSingleConfigurationApi: true, // only necessary if API is of single configuration format
+      isNonUniqueNameApi: true,            // only necessary if API doesn't have unique name attribute
+      propertyNameOfGetAllResponse: "cluster",         // only necessary if API returns no "values" envelope (see below)
+  },
 }
 
 var standardApiPropertyNameOfGetAllResponse = "values"
